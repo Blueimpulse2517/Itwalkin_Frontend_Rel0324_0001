@@ -66,7 +66,7 @@ useEffect(() => {
           .then((response) => {
             let result = response.data
             let token = result.token
-            let Id = email
+            let Id = result.id
             if (result.status == "success") {
               localStorage.setItem("StudLog", JSON.stringify(token))
               navigate("/alljobs", {state:{name:result.name}})
